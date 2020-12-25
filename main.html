@@ -1,0 +1,81 @@
+<html>
+
+<head>
+	<title>search page</title>
+
+	<style>
+
+		* {
+			margin: 0px;
+			border: 0px;
+			position: relative;
+		}
+
+		#sec {
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			background: linear-gradient(-45deg, #03001e, #7303c0, #ec38bc, #b43617);
+			background-repeat: no-repeat;
+			background-size: 400% 400%;
+			animation: change 7s alternate infinite;
+
+		}
+
+		@keyframes change {
+			0% {
+				background-position: 0%;
+			}
+
+			50% {
+				background-position: 50%;
+			}
+
+			100% {
+				background-position: 100%;
+			}
+
+			body {
+				max-height: 400px;
+				max-width: 400px;
+			}
+		}
+
+		h1 {
+			font-size: 150px;
+			text-align: center;
+			color: #fcba03;
+			text-shadow: 3px 3px hsl(0, 91%, 36%);
+			font-family: Kristen ITC;
+		}
+
+		input {
+			text-align: left;
+			margin-left: 30%;
+			font-size: 15px;
+			padding: 8px;
+			width: 600px;
+			border-radius: 15px;
+			outline: none;
+		}
+
+		input:hover {
+			box-shadow: 1px 1px 1px 1px black;
+		}
+	</style>
+
+</head>
+
+<body>
+	<section id="sec"></section>
+	<h1 id="heading">null</h1>
+	<form action="http://www.google.com/search?" method="GET">
+		<input type="search" placeholder="feel free to search" name="q">
+	</form>
+	<script>
+		document.getElementById("heading").innerHTML = prompt("enter your name", "");
+	</script>
+
+</body>
+
+</html>
